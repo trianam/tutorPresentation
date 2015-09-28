@@ -1,0 +1,153 @@
+%This work is licensed under the Creative Commons
+%Attribution-ShareAlike 4.0 International License. To view a copy of
+%this license, visit http://creativecommons.org/licenses/by-sa/4.0/ or
+%send a letter to Creative Commons, PO Box 1866, Mountain View, CA
+%94042, USA.
+
+%\documentclass[gray,handout, pdftex, 11pt]{beamer}
+%\documentclass[handout, pdftex, 11pt]{beamer}
+
+\documentclass[pdftex, 11pt]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[italian]{babel}
+\usepackage{graphicx}
+\usepackage{forloop}
+\usepackage{tikz}
+
+\definecolor{links}{HTML}{2A1B81}
+\hypersetup{colorlinks,linkcolor=links,urlcolor=links}
+
+\definecolor{links}{HTML}{2A1B81}
+\hypersetup{colorlinks,linkcolor=,urlcolor=links}
+
+
+\mode<presentation>{
+  %-------------------------1
+  \usetheme{Boadilla}
+  \usecolortheme{beaver}
+  %-------------------------1
+  %-------------------------2
+  %\usetheme{Goettingen}
+  %\usecolortheme{sidebartab}
+  %-------------------------2
+  %\useoutertheme[right]{sidebar}
+  %\usefonttheme{default}
+  \setbeamercovered{transparent}
+  %\setbeameroption{show notes on second screen=right}
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{footline}{}
+
+  \bibliographystyle{abbrv}  
+  %\renewcommand\bibfont{\scriptsize}
+  \setbeamertemplate{bibliography item}{\textbullet}
+  \setbeamertemplate{itemize item}{\checkmark}
+  \setbeamertemplate{itemize subitem}{-}
+  \setbeamertemplate{enumerate items}[default]
+  \setbeamertemplate{sections/subsections in toc}[square]
+}
+
+\usebackgroundtemplate
+{
+  \begin{tikzpicture}
+    \node[opacity=0.04] {\includegraphics[scale=1]{img/logoUnifi.png}};
+%    \node[opacity=0.04] {\includegraphics[scale=1]{img/logoUnifi.eps}};
+  \end{tikzpicture}
+}
+
+\begin{document}
+
+\title[Piattaforma Moodle]{\textbf{Piattaforma Moodle e SOL}}
+\date[28/09/15]{\flushright 28 settembre 2015}
+\subtitle{Tutorato di informatica}
+\institute[Uni. Firenze]{
+  \includegraphics[width=2cm]{img/logoUnifi.eps}\\
+%  \includegraphics[width=2cm]{img/logoUnifi.png}\\
+  Universit\`a degli Studi di Firenze
+}
+
+\author[Stefano Martina]{
+  Stefano \textsc{Martina}\\
+  \href{mailto:stefano.martina@stud.unifi.it}{stefano.martina@stud.unifi.it}
+}
+
+\titlegraphic{
+  \tiny
+  \href{http://creativecommons.org/licenses/by-sa/4.0/}{\includegraphics[width=1cm]{img/logoCC.png}}
+  This work is licensed under a
+  \href{http://creativecommons.org/licenses/by-sa/4.0/}{Creative
+    Commons Attribution-ShareAlike 4.0 International License}.
+}
+
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+\begin{frame}
+  \frametitle{Piattaforma Moodle (E-Learning)}
+  \begin{itemize}
+  \item La piattaforma \alert{Moodle} è il principale strumento usato dai
+    professori per fornire \alert{materiale} e \alert{notizie}
+    riguardo il corso
+    \pause
+  \item \`E accessibile all'indirizzo: \url{http://e-l.unifi.it/}
+    \pause
+  \item Permette di \alert{iscriversi} ai corsi usando una
+    \alert{chiave} data in classe dal professore
+    \pause
+  \item \`E necessario \alert{autenticarsi} con le credenziali di
+    accesso dell'universit\`a
+  \end{itemize}
+\end{frame}
+
+\newcounter{screenNum}
+\forloop{screenNum}{1}{\value{screenNum} < 9}{
+  \begin{frame}
+    \begin{center}
+      \includegraphics[width=\textwidth]{img/screen\arabic{screenNum}.png}
+    \end{center}
+  \end{frame}
+}
+
+\begin{frame}
+  \frametitle{Piattaforma SOL (Servizi On Line)}
+  \begin{itemize}
+  \item La piattaforma \alert{SOL} \`e lo strumento di gestione e
+    controllo delle pratiche \alert{burocratiche} dell'universit\`a
+    \pause
+  \item \`E accessibile all'indirizzo \url{http://sol.unifi.it}
+    \pause
+  \item Permette di:
+    \pause
+    \begin{itemize}
+    \item \alert{Registrarsi} per gli \alert{esami} (ricordatevi di
+      non perdere la finestra di apertura dell'\alert{appello})
+      \pause
+    \item \alert{Verbalizzare} gli \alert{esami}
+      \pause
+    \item Stampare i \alert{bollettini} per il pagamento delle tasse
+      \pause
+    \item Controllare i dati \alert{anagrafici}, le
+      \alert{iscrizioni}, e lo stato dei \alert{pagamenti} delle
+      tasse, il \alert{piano di studi}, etc\dots
+      \pause
+    \item Reperire le \alert{licenze} software messe a disposizione
+      per gli utenti
+      \pause 
+    \end{itemize}
+  \item \`E necessario \alert{autenticarsi} con le credenziali di
+    accesso dell'universit\`a
+  \end{itemize}
+\end{frame}
+
+\forloop{screenNum}{1}{\value{screenNum} < 3}{
+  \begin{frame}
+    \begin{center}
+      \includegraphics[width=\textwidth]{img/screenSol\arabic{screenNum}.png}
+    \end{center}
+  \end{frame}
+}
+\end{document}
